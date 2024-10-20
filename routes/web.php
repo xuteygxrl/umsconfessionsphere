@@ -5,8 +5,8 @@ use App\Http\Controllers\WelcomeController;
 
 
 
-Route::get('/home', function () {
-    return view('system.home');
+Route::get('/', function () {
+    return view('system.umsconfessionsphere');
 });
 
 Route::get('/welcome',[WelcomeController::class,'welcome'])->name('welcome');

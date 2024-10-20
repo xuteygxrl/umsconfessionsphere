@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="UMS Confession Sphere">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to UMS Confession Sphere. This is a platform for University of Malaysia Sabah students to share their confessions.">
-    <meta name="application-name" content="UMS Confession Sphere">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link href='./boxicons-2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>UMS Confession Sphere</title>
-</head>
-<body>
+@extends('layouts.partial.head')
+
+<body style="background-color: black">
     <header class="header">
         <a  onclick='location.href="#"'  class="logo">UMS Confession Sphere</a>
         <input type="checkbox" name="a" id="check">
@@ -80,120 +69,36 @@
                 <div class="skillcircle">
                     <div class="skillcircle2">
                         <h2 class="skillpre"><small></small></h2>
-			</a>
+		            </a>
                     </div>
                 </div>
-		<a  onclick='window.open("crushing.html")'>
+		            <a  onclick='window.open("crushing.html")'>
                 <h3 class="skilltx">Crushing</h3>
-            </a>
 		</div>
 		<a  onclick='window.open("universitylife.html")'>
             <div class="skillbox" style="--b:100%;--clr:rgb(60, 128, 155);" id="scdes">
                 <div class="skillcircle">
                     <div class="skillcircle2">
                         <h2 class="skillpre"><small></small></h2>
-			</a>
+			
                     </div>
                 </div>
 		<a  onclick='window.open("universitylife.html")'>
                 <h3 class="skilltx">University Life</h3>
-		</a>
+		
             </div>
 		<a  onclick='window.open("general.html")'>
-	    <div class="skillbox" style="--b:100%;--clr:white;" id="sjs">
+	        <div class="skillbox" style="--b:100%;--clr:white;" id="sjs">
                 <div class="skillcircle">
                     <div class="skillcircle2">
                         <h2 class="skillpre"><small></small></h2>
-			</a>
+			
                     </div>
                 </div>
-		<a  onclick='window.open("general.html")'>
+		<a onclick='window.open("general.html")'>
                 <h3 class="skilltx">General</h3>
-		</a>
-            </div>
-        </div><br><br><br>
-
-                <div id="Confessions">
-            <div class="titles">
-                <h1 class="glitch">
-                    <span aria-hidden="true">Confessions</span>
-                    Confessions
-                    <span aria-hidden="true">Confessions</span>
-                </h1>
-                <hr id="hr0">
-            </div>
-            <br>
-            <div class="prjs">
-                <div class="pjglbox">
-                    <a  onclick='window.open("D:\KK24603 WEB ENGINEERING\XAMPP\htdocs\umsconfessionsphere\crusing.html")' class="pjbox" style="--pj:1">
-                        <img class="pjimg" src="./assets/UMS-Logo-with-Logotype-01.png" alt="GitHub">
-                        <h1 class="pjtext smoothtransform">Visit Confessions</h1>
-                        <p class="pjsmtext smoothtransform">Make a confessions here. This platform can bring you joy! CHEERS!</p>
-                    </a>
-                    <!--<a href="D:\KK24603 WEB ENGINEERING\XAMPP\htdocs\umsconfessionsphere\crusing.html" target="_blank" class="pjbox" style="--pj:2">
-                        <img class="pjimg" src="./assets/UMS-Logo-with-Logotype-01.png" alt="GitHub">
-                        <h1 class="pjtext smoothtransform">Visit Confessions</h1>
-                        <p class="pjsmtext smoothtransform">Make a confessions here. This platform can bring you joy! CHEERS!</p>
-                    </a>
-                    <a href="D:\KK24603 WEB ENGINEERING\XAMPP\htdocs\umsconfessionsphere\crusing.html" target="_blank" class="pjbox" style="--pj:3">
-                        <img class="pjimg" src="./assets/UMS-Logo-with-Logotype-01.png" alt="GitHub">
-                        <h1 class="pjtext smoothtransform">Visit GitHub</h1>
-                        <p class="pjsmtext smoothtransform">See all projecs. Only special projecs are displayed here !</p>
-                    </a>
-                    <a href="D:\KK24603 WEB ENGINEERING\XAMPP\htdocs\umsconfessionsphere\crusing.html" target="_blank" class="pjbox" style="--pj:4">
-                        <img class="pjimg" src="./assets/UMS-Logo-with-Logotype-01.png" alt="GitHub">
-                        <h1 class="pjtext smoothtransform">Visit GitHub</h1>
-                        <p class="pjsmtext smoothtransform">See all projecs. Only special projecs are displayed here !</p>
-                    </a>
-                    <a href="https://github.com/Saviru" target="_blank" class="pjbox" style="--pj:5">
-                        <img class="pjimg" src="./assets/UMS-Logo-with-Logotype-01.png" alt="GitHub">
-                        <h1 class="pjtext smoothtransform">Visit GitHub</h1>
-                        <p class="pjsmtext smoothtransform">See all projecs. Only special projecs are displayed here !</p>
-                    </a>-->
-                </div>    
-            </div>
-            <br><br><br><br>
+		
         </div>
-        <div class="Feedback" id="Feedback">
-            <div class="titles">
-                <h1 class="glitch">
-                    <span aria-hidden="true">Feedback/Report</span>
-                    Feedback/Report
-                    <span aria-hidden="true">Feedback/Report</span>
-                </h1>
-                <hr id="hr0">
-                <br><br><br><br>
-                <div class="contmediv">
-                    <div class="contactmail">
-                        <div class="contactgroup">
-                            <input type="text" class="inputcont" id="name" required>
-                            <label class="contlabel">Your&nbsp;name:</label>
-                        </div>
-                        <div class="contactgroup">
-                            <input type="email" class="inputcont" id="email" required>
-                            <label class="contlabel" for="">Your&nbsp;Email:</label>
-                        </div>
-                        <div class="contactgroup">
-                            <input type="text" class="inputcont" id="subject" required>
-                            <label class="contlabel inprmailvalid" for="">Subject:</label>
-                        </div>
-                        <div class="contactgroup">
-                            <textarea type="text" class="inputcont" id="message" required></textarea>
-                            <label class="contlabel" for="">Your&nbsp;messege:</label>
-                        </div>
-                        <br>
-                        <div class="lastcont">
-                            <a style="font-weight: bolder;"  onclick="sendMessage();" id="ctmbutton"><span id="ctme">Send</span></a>
-                        </div>
-                        <br>
-                    </div>
-                </div>
-                <hr style="height: 10rem; border: 0;"><br><br><br>
-
-                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-            </div>
-        </div>
-
     </section>
     <br><br><br>
     
