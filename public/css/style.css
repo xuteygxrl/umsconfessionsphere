@@ -44,6 +44,11 @@ body {
     background: #000;
 }
 
+p{
+    margin: 0% !important;
+    font-size:1vw;
+}
+
 /*Background animations*/
 #container {
     display: grid;
