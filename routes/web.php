@@ -6,11 +6,21 @@ use App\Http\Controllers\WelcomeController;
 
 
 Route::get('/', function () {
-    return view('system.partial.umsconfessionsphere');
+    return view('system.umsconfessionsphere');
 });
 
-Route::get('/home', function () {
-    return view('system.partial.home');
+Route::get('/crushing-list', function () {
+    return view('system.crushing-list');
 });
+
+Route::get('/university-life-list', function () {
+    return view('system.university-life-list');
+});
+
+
+Route::get('/general-list', function () {
+    return view('system.general-list');
+});
+
 
 Route::get('/welcome',[WelcomeController::class,'welcome'])->name('welcome');

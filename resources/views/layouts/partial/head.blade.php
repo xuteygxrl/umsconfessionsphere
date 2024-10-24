@@ -22,9 +22,10 @@
         <i class="bx bx-x bx-tada-hover" id="close-icon"></i>
     </label>
     <nav class="navbar" id="navigation">
-        <a class="url active" id="hmnav"   onclick='location.href="#Home"' style="--i:0;">Home</a>
-        <a class="url"  onclick='location.href="#Confessions"' style="--i:1;">Confessions</a>
-        <a class="url"  onclick='location.href="#Feedback"' style="--i:3;">Feedback/Report</a>
-        <a class="url"  onclick='location.href="login.html"' style="--i:1;">Login</a>
+        <a class="url active" id="hmnav"   href="/" style="--i:0;">Home</a>
+        <a class="url"  href="/crushing-list" style="--i:1;">crushing</a>
+        <a class="url"  href="/general-list" style="--i:3;">general</a>
+        <a class="url"  href="/university-life-list" style="--i:1;">University</a>
+        <a class="url"  href="/logint" style="--i:1;">Login</a>
     </nav>
 </header>

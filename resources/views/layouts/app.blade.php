@@ -1,19 +1,5 @@
 @extends('layouts.partial.head')
 <body style="background-color: black">
-    <header class="header">
-        <a  onclick='location.href="#"'  class="logo">UMS Confession Sphere</a>
-        <input type="checkbox" name="a" id="check">
-        <label for="check" class="icons">
-            <i class="bx bx-menu bx-tada-hover" id="menu-icon"></i>
-            <i class="bx bx-x bx-tada-hover" id="close-icon"></i>
-        </label>
-        <nav class="navbar" id="navigation">
-            <a class="url active" id="hmnav"   onclick='location.href="#Home"' style="--i:0;">Home</a>
-            <a class="url"  onclick='location.href="#Confessions"' style="--i:1;">Confessions</a>
-            <a class="url"  onclick='location.href="#Feedback"' style="--i:3;">Feedback/Report</a>
-            <a class="url"  onclick='location.href="login.html"' style="--i:1;">Login</a>
-        </nav>
-    </header>
 
     <div class="d-none d-sm-block">
         <div id="container"></div>
@@ -21,6 +7,19 @@
     </div>
 
     @yield('content')
+
+    <!-- Context menu -->
+    <div id="context-menu">
+        <div onclick='location.href="#top"' class="item">Go to top</div>
+        <div onclick='window.location.reload()' class="item">Reload</div>
+        <hr class="ctmhr">
+        <div onclick='location.href="#Home"' class="item">Home</div>
+        <div onclick='location.href="#Skills"' class="item">Skills</div>
+        <div onclick='location.href="#Feedback"' class="item">Feedback/Report</div>
+        <hr class="ctmhr">
+        <div onclick='window.open("https://github.com/Saviru/Saviru.github.io")' class="item">Get source code</div>
+        <div id="urlcopy" class="item">Copy link address&nbsp;&nbsp;&nbsp;<span class="donect">Copied !</span></div> 
+    </div>
 
     <script src="{{asset('script/script.js')}}"></script>
 </body>

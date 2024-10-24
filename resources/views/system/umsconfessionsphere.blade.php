@@ -35,8 +35,8 @@
             </div>
         </div>
     </section>
-    <section class="smoothtransform" id="Skills">
-        <div class="titles">
+    <section class="smoothtransform row d-flex" id="Skills">
+        <div class="titles col-12 justify-content-center">
             <h1 class="glitch">
                 <span aria-hidden="true">Category</span>
                 Category
@@ -44,42 +44,46 @@
             </h1>
             <hr id="hr0">
         </div>
-	<a  onclick='window.open("crushing.html")'>
-        <div class="skillcontainer smoothtransform" id="skillsec">
-            <div class="skillbox" style="--b:100%;--clr:rgb(179, 5, 179);" id="scpp">
-                <div class="skillcircle">
-                    <div class="skillcircle2">
-                        <h2 class="skillpre"><small></small></h2>
-		            </a>
+	
+        <div class="col-12">
+            <a  href="/crushing-list">
+            <div class="skillcontainer smoothtransform" id="skillsec">
+                <div class="skillbox" style="--b:100%;--clr:rgb(179, 5, 179);" id="scpp">
+                    <div class="skillcircle">
+                        <div class="skillcircle2">
+                            <h2 class="skillpre"><small></small></h2>
+                            </a>
+                        </div>
                     </div>
-                </div>
-		            <a  onclick='window.open("crushing.html")'>
-                <h3 class="skilltx">Crushing</h3>
-		</div>
-		<a  onclick='window.open("universitylife.html")'>
-            <div class="skillbox" style="--b:100%;--clr:rgb(60, 128, 155);" id="scdes">
-                <div class="skillcircle">
-                    <div class="skillcircle2">
-                        <h2 class="skillpre"><small></small></h2>
-			
-                    </div>
-                </div>
-		<a  onclick='window.open("universitylife.html")'>
-                <h3 class="skilltx">University Life</h3>
-		
+                    <a  href="/crushing-list">
+                    <h3 class="skilltx">Crushing</h3>
             </div>
-		<a  onclick='window.open("general.html")'>
-	        <div class="skillbox" style="--b:100%;--clr:white;" id="sjs">
-                <div class="skillcircle">
-                    <div class="skillcircle2">
-                        <h2 class="skillpre"><small></small></h2>
-			
+                <a  href='/university-life-list'>
+                <div class="skillbox" style="--b:100%;--clr:rgb(60, 128, 155);" id="scdes">
+                    <div class="skillcircle">
+                        <div class="skillcircle2">
+                            <h2 class="skillpre"><small></small></h2>
+                
+                        </div>
                     </div>
+                    <a  href='/university-life-list'>
+                    <h3 class="skilltx">University Life</h3>
+            
                 </div>
-		<a onclick='window.open("general.html")'>
-                <h3 class="skilltx">General</h3>
-		
+                <a  href='/general-list'>
+                <div class="skillbox" style="--b:100%;--clr:white;" id="sjs">
+                    <div class="skillcircle">
+                        <div class="skillcircle2">
+                            <h2 class="skillpre"><small></small></h2>
+                
+                        </div>
+                    </div>
+                    <a href='/general-list'>
+                    <h3 class="skilltx">General</h3>
+            
+            </div>
         </div>
+        
     </section>
     <br><br><br>
     
@@ -88,18 +92,7 @@
         <i class='bx bx-chevron-up'></i>
     </a>
 
-    <!-- Context menu -->
-    <div id="context-menu">
-        <div onclick='location.href="#top"' class="item">Go to top</div>
-        <div onclick='window.location.reload()' class="item">Reload</div>
-        <hr class="ctmhr">
-        <div onclick='location.href="#Home"' class="item">Home</div>
-        <div onclick='location.href="#Skills"' class="item">Skills</div>
-        <div onclick='location.href="#Feedback"' class="item">Feedback/Report</div>
-        <hr class="ctmhr">
-        <div onclick='window.open("https://github.com/Saviru/Saviru.github.io")' class="item">Get source code</div>
-        <div id="urlcopy" class="item">Copy link address&nbsp;&nbsp;&nbsp;<span class="donect">Copied !</span></div> 
-    </div>
+    
 
     <div class="toastnt">
         <div class="ntcont">
