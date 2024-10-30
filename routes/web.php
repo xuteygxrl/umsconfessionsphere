@@ -1,26 +1,21 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PageNavigation;
+
+// Public routes
 
 
-
-Route::get('/', function () {
-    return view('system.umsconfessionsphere');
+// Protected routes (Require authentication)
+Route::middleware('auth')->group(function () {
+    Route::get('/', [PageNavigation::class, 'home'])->name('home');
+    Route::get('/crushing-list', [PageNavigation::class, 'crushing'])->name('crushing');
+    Route::get('/general-list', [PageNavigation::class, 'general'])->name('general');
+    Route::get('/university-life-list', [PageNavigation::class, 'universityLife'])->name('university-life');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/crushing-list', function () {
-    return view('system.crushing-list');
-});
-
-Route::get('/university-life-list', function () {
-    return view('system.university-life-list');
-});
-
-
-Route::get('/general-list', function () {
-    return view('system.general-list');
-});
-
-
-Route::get('/welcome',[WelcomeController::class,'welcome'])->name('welcome');
+require __DIR__.'/auth.php';

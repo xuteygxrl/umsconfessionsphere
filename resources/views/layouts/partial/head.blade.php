@@ -22,10 +22,22 @@
         <i class="bx bx-x bx-tada-hover" id="close-icon"></i>
     </label>
     <nav class="navbar" id="navigation">
-        <a class="url active" id="hmnav"   href="/" style="--i:0;">Home</a>
-        <a class="url"  href="/crushing-list" style="--i:1;">crushing</a>
-        <a class="url"  href="/general-list" style="--i:3;">general</a>
-        <a class="url"  href="/university-life-list" style="--i:1;">University</a>
-        <a class="url"  href="/logint" style="--i:1;">Login</a>
+        {{ request()->path() }} 
+        <a class="url nav-item {{ request()->is('/') ? 'active' : '' }}" id="hmnav"   href="/" style="--i:0;">Home</a>
+        <a class="url nav-item {{ request()->is('crushing-list') ? 'active' : '' }}"  href="/crushing-list" style="--i:1;">Crushing</a>
+        <a class="url nav-item {{ request()->is('general-list') ? 'active' : '' }}"  href="/general-list" style="--i:3;">General</a>
+        <a class="url nav-item {{ request()->is('university-life-list') ? 'active' : '' }}"  href="/university-life-list" style="--i:1;">University Life</a>
+        <a class="url nav-item {{ request()->is('login') ? 'active' : '' }}" href="{{ route('logout') }}" 
+            onclick="event.preventDefault(); 
+                     fetch('{{ route('logout') }}', { 
+                         method: 'POST', 
+                         headers: { 
+                             'X-CSRF-TOKEN': '{{ csrf_token() }}' 
+                         } 
+                     }).then(() => window.location.href = '{{ route('login') }}');" 
+            style="--i:1;">
+            Logout
+         </a>
+         
     </nav>
 </header>
