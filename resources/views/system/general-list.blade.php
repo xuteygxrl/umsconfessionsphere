@@ -10,15 +10,29 @@
                 <div class="col-12">
                     <div class="confession-form-container" style="width:100%">
                         <h2 class="text-start" style="color:white">Submit Your Confession</h2>
-                        <form class="d-flex flex-column" action="submit_confession.php" method="POST">
+                        <form class="d-flex flex-column" action="{{ route('submit.confession') }}" method="POST">
+                            @csrf <!-- Add CSRF token for security -->
+
                             <label for="confession" style="color:white">Your Confession:</label>
                             <textarea id="confession" name="confession" placeholder="Write your confession here..." required style="width:100%; height:10vh"></textarea>
+
+                            <input type="hidden" name="confession_category_id" value="1">
+
+                            <!-- Switch for commentSwitch -->
+                            <div class="form-group">
+                                <label for="commentSwitch" style="color:white">Allow Comments:</label>
+                                <label class="switch">
+                                    <input type="checkbox" name="commentSwitch" id="commentSwitch" value="1">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
                             <button type="submit" class="submit-button align-self-end">Submit Confession</button>
                         </form>
                     </div>
                 </div>
             </div>
-             
+
             <h1 class="text-center py-4">
                 <span style="" data-text="UMS">Confession Section</span>
             </h1>
@@ -38,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- Confession Item 2 -->
                         <div class="confession-item">
                             <div class="confession-text">
@@ -57,5 +71,5 @@
             </div>
         </div>
     </section>
-    
+
 @endsection
