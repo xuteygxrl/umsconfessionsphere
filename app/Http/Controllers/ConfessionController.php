@@ -16,9 +16,12 @@ class ConfessionController extends Controller
         // Validate the request
         $validatedData = $request->validate([
             'confession' => 'required|string|max:1000',
-            'confession_category_id' => 'required|exists:confession_category,id', // Validate that the category exists
-            'commentSwitch' => 'required|boolean' // Validate the comment switch
+            'confession_category_id' => 'required|exists:confession_category,id',
+            'commentSwitch' => 'nullable|boolean' // Make commentSwitch optional and validate as a boolean
         ]);
+
+        // Set default value for commentSwitch to 0 if not provided
+        $validatedData['commentSwitch'] = $validatedData['commentSwitch'] ?? 0;
 
         try {
             // Create a new confession
@@ -49,6 +52,7 @@ class ConfessionController extends Controller
             return redirect()->back()->withErrors(['error' => 'An error occurred while submitting your confession. Please try again.']);
         }
     }
+
 
 
 }
