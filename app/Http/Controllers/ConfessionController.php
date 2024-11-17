@@ -52,7 +52,51 @@ class ConfessionController extends Controller
             return redirect()->back()->withErrors(['error' => 'An error occurred while submitting your confession. Please try again.']);
         }
     }
+    // Approve the confession
+    public function approve($id)
+    {
+        try {
+            $confession = Confession::findOrFail($id);
+            $confession->status = 'a'; // Set the status to approved
+            $confession->save();
 
+            // Log success
+            Log::info('Confession approved successfully', [
+                'confession_id' => $confession->id,
+                'user_id' => $confession->userId,
+            ]);
 
+            // Redirect back with success message
+            return redirect()->back()->with('success', 'Confession approved.');
+        } catch (\Exception $e) {
+            Log::error('Error approving confession', [
+                'error' => $e->getMessage(),
+            ]);
+            return redirect()->back()->withErrors(['error' => 'An error occurred while approving the confession.']);
+        }
+    }
+    // Reject the confession
+    public function reject($id)
+    {
+        try {
+            $confession = Confession::findOrFail($id);
+            $confession->status = 'r'; // Set the status to rejected
+            $confession->save();
+
+            // Log success
+            Log::info('Confession rejected successfully', [
+                'confession_id' => $confession->id,
+                'user_id' => $confession->userId,
+            ]);
+
+            // Redirect back with success message
+            return redirect()->back()->with('success', 'Confession rejected.');
+        } catch (\Exception $e) {
+            Log::error('Error rejecting confession', [
+                'error' => $e->getMessage(),
+            ]);
+            return redirect()->back()->withErrors(['error' => 'An error occurred while rejecting the confession.']);
+        }
+    }
 
 }

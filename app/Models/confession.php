@@ -34,6 +34,6 @@ class Confession extends Model
 
     public function category()
     {
-        return $this->belongsTo(confessionCategory::class, 'confessionCategoryId');
+        return $this->belongsTo(confessionCategory::class, 'confessionCategoryId','id');
     }
 }

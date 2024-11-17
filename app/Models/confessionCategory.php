@@ -9,9 +9,9 @@ class confessionCategory extends Model
 {
     use HasFactory;
 
-    protected $table = 'confessionCategory';
+    protected $table = 'confession_category';
 
     protected $fillable=[
-        'categoryName'
+        'confessionName'
     ];
 }

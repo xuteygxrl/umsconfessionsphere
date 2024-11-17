@@ -5,9 +5,23 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageNavigation;
 use App\Http\Controllers\ConfessionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\AuthController;
 
 // Public routes
 
+
+// Routes without authentication middleware
+Route::get('admin/login', [AuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('admin/login', [AuthController::class, 'login']);
+
+// Grouped routes that require admin authentication
+Route::middleware('auth:admin')->group(function () {
+    Route::get('admin/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+    Route::post('admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
+
+    Route::post('admin/confession/approve/{id}', [ConfessionController::class, 'approve'])->name('admin.confession.approve');
+    Route::post('admin/confession/reject/{id}', [ConfessionController::class, 'reject'])->name('admin.confession.reject');
+});
 
 // Protected routes (Require authentication)
 Route::middleware('auth')->group(function () {

@@ -23,7 +23,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-html { 
+html {
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -107,7 +107,7 @@ p{
 }
 
 .smoothtransform {
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 /*Navigation Bar*/
@@ -176,7 +176,7 @@ p{
     -webkit-background-clip: text;
     background-clip: text;
     animation: navanimate 10s linear infinite;
-} 
+}
 
 @keyframes navanimate {
     0% {
@@ -262,9 +262,9 @@ section {
     color: #fff;
     font-size: 3em;
     padding: 0 10px;
-    font-weight: 600; 
+    font-weight: 600;
     margin-left: 25rem;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 #names span{
@@ -304,7 +304,7 @@ section {
     70%, 90% {
         width: 100%;
     }
-    
+
 }
 
 
@@ -320,7 +320,7 @@ section {
     transition: 50ms ease-in-out;
 
     transform-style: preserve-3d;
-    transform: 
+    transform:
         perspective(5000px)
         rotateY(var(--rotY))
         rotateX(var(--rotX));
@@ -354,7 +354,7 @@ section {
     background: #222;
     border-radius: 20px;
     z-index: 1;
-    transition: all 100ms ease-in-out; 
+    transition: all 100ms ease-in-out;
 }
 
 @property --a {
@@ -366,7 +366,7 @@ section {
 @keyframes rotating {
    0% {
     --a: 0deg;
-   } 
+   }
 
    100% {
     --a: 360deg;
@@ -382,7 +382,7 @@ section {
     margin-top: 1rem;
     margin-left: .6rem;
     text-align: justify;
-    transition: all 50ms ease-in-out; 
+    transition: all 50ms ease-in-out;
 }
 
 #python .nuberings {
@@ -444,7 +444,7 @@ section {
 
 #childtext {
     color: #a5a5a5;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 
@@ -621,7 +621,7 @@ section {
     border-radius: 50px;
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 .skillcontainer .skillbox .skillcircle {
@@ -644,7 +644,7 @@ section {
     background: #111;
     border-radius: 50%;
     backdrop-filter: blur(20px);
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 .skillcontainer .skillbox .skillcircle2 {
@@ -655,7 +655,7 @@ section {
     backdrop-filter: blur(17px);
     -webkit-backdrop-filter: blur(17px);
     border-radius: 50%;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 .skillcontainer .skillbox .skillpre {
@@ -665,14 +665,14 @@ section {
     color: #fff;
     margin-top: 25%;
     border-radius: 20px;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 
 .skillcontainer .skillbox .skillpre small {
     font-size: 0.5rem;
     font-weight: 300;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 .skillcontainer .skillbox .skilltx {
@@ -680,7 +680,7 @@ section {
     margin-top: 20px;
     font-weight: 500;
     letter-spacing: 0.1rem;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 /*Go to top*/
@@ -699,14 +699,14 @@ section {
     font-size: 32px;
     color: #000;
     text-decoration: none;
-    transition: all .4s; 
+    transition: all .4s;
 }
 
 /*Random letters glitch effect*/
 .ranlets {
     font-family: 'Space Mono', monospace;
 }
-  
+
 .ranlets:hover {
     background-color: white;
     color: black;
@@ -743,7 +743,7 @@ section {
     left: 0;
     right: 0;
 }
-  
+
 .glitch span:first-child {
     animation: glitch 650ms infinite;
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
@@ -751,7 +751,7 @@ section {
     /* color: green; */
     opacity: 0.8;
 }
-  
+
 .glitch span:last-child {
     animation: glitch 375ms infinite;
     clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
@@ -761,7 +761,7 @@ section {
 }
 
 
-  
+
 @keyframes glitch {
     0% {
       text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
@@ -797,7 +797,7 @@ section {
         -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
     }
 }
-  
+
 @media (prefers-reduced-motion: reduce) {
     *,
     ::before,
@@ -843,7 +843,7 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 .gltxedu {
@@ -851,7 +851,7 @@ section {
     position: relative;
     padding: 60px;
     text-align: left;
-    transition: all 250ms ease-in-out; 
+    transition: all 250ms ease-in-out;
 }
 
 .glbox .glsqu {
@@ -875,7 +875,7 @@ section {
     50% {
         transform: translateY(40px);
     }
-    
+
 }
 
 .glbox .glsqu:nth-child(1) {
@@ -1275,7 +1275,7 @@ footer {
 }
 
 
-.hvul .hvli:hover .hva { 
+.hvul .hvli:hover .hva {
     color: #000;
     font-size: 0.57rem;
     font-weight: bolder;
@@ -1667,7 +1667,7 @@ footer {
         justify-items: center;
         text-align: center;
     }
-    
+
     .socialm {
         display: grid;
         height: 40rem;
@@ -1790,21 +1790,21 @@ footer {
         width: 70px;
         height: 70px;
     }
-    
+
     .glbox .glsqu:nth-child(2) {
         top: 140px;
         left: -70px;
         width: 90px;
         height: 90px;
     }
-    
+
     .glbox .glsqu:nth-child(3) {
         bottom: 40px;
         right: -30px;
         width: 50px;
         height: 50px;
     }
-    
+
     .glbox .glsqu:nth-child(4) {
         bottom: -50px;
         right: 130px;
@@ -1812,7 +1812,7 @@ footer {
         height: 20px;
         border-radius: 5px;
     }
-    
+
     .glbox .glsqu:nth-child(5) {
         top: -50px;
         left: 110px;
@@ -1909,12 +1909,12 @@ footer {
     .skillcontainer .skillbox {
         width: 160px;
     }
-    
+
     .skillcontainer .skillbox .skillcircle {
         width: 110px;
         height: 110px;
     }
-    
+
     .skillcontainer .skillbox .skillpre {
         font-size: 2rem;
     }
@@ -1928,21 +1928,21 @@ footer {
         width: 40px;
         height: 40px;
     }
-    
+
     .glbox .glsqu:nth-child(2) {
         top: 140px;
         left: -30px;
         width: 50px;
         height: 50px;
     }
-    
+
     .glbox .glsqu:nth-child(3) {
         bottom: 40px;
         right: -20px;
         width: 30px;
         height: 30px;
     }
-    
+
     .glbox .glsqu:nth-child(4) {
         bottom: -50px;
         right: 130px;
@@ -1950,7 +1950,7 @@ footer {
         height: 20px;
         border-radius: 5px;
     }
-    
+
     .glbox .glsqu:nth-child(5) {
         top: -50px;
         left: 110px;
@@ -2025,12 +2025,12 @@ footer {
     .skillcontainer .skillbox {
         width: 140px;
     }
-    
+
     .skillcontainer .skillbox .skillcircle {
         width: 90px;
         height: 90px;
     }
-    
+
     .skillcontainer .skillbox .skillpre {
         font-size: 1.5rem;
     }
@@ -2046,21 +2046,21 @@ footer {
         width: 40px;
         height: 40px;
     }
-    
+
     .glbox .glsqu:nth-child(2) {
         top: 140px;
         left: -30px;
         width: 50px;
         height: 50px;
     }
-    
+
     .glbox .glsqu:nth-child(3) {
         bottom: 40px;
         right: -20px;
         width: 30px;
         height: 30px;
     }
-    
+
     .glbox .glsqu:nth-child(4) {
         bottom: -50px;
         right: 130px;
@@ -2068,7 +2068,7 @@ footer {
         height: 20px;
         border-radius: 5px;
     }
-    
+
     .glbox .glsqu:nth-child(5) {
         top: -50px;
         left: 110px;
@@ -2156,7 +2156,7 @@ footer {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);   
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -2190,4 +2190,24 @@ footer {
     height: 10vh;
     text-align: left;
     background-color: white;
+}
+
+#sidebar {
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: #021431 !important; /* Dark green background */
+}
+
+.adminBody{
+    overflow: hidden;
+}
+.container-fluid{
+    overflow: hidden;
+}
+.admin-view{
+    height: 92vh;
+    overflow: scroll;
+    p{
+        font-size: 15px !important;
+    }
 }
