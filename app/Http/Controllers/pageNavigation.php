@@ -13,6 +13,7 @@ class pageNavigation extends Controller
     public function crushing() {
         $confession = Confession::where('status','a')
                                 ->where('confessionCategoryId',2)
+                                ->where('isDeleted','!=',1)
                                 ->get();
 
         return view('system.crushing-list',['confession' => $confession]);
