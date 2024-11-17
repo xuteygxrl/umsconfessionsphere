@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\models\Confession;
 use Illuminate\Http\Request;
 
 class pageNavigation extends Controller
@@ -10,7 +11,11 @@ class pageNavigation extends Controller
         return view('system.umsconfessionsphere');
     }
     public function crushing() {
-        return view('system.crushing-list');
+        $confession = Confession::where('status','a')
+                                ->where('confessionCategoryId',2)
+                                ->get();
+
+        return view('system.crushing-list',['confession' => $confession]);
     }
     public function general() {
         return view('system.general-list');

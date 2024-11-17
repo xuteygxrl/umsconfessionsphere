@@ -40,32 +40,20 @@
             <div class="row">
                 <div class="col-12">
                     <div class="confessionList">
-                        <div class="confession-item py-4">
-                            <div class="confession-text">
-                                I’m so tired of pretending everything is okay when it’s not. I just needed to get this off my chest anonymously.
-                            </div>
-                            <div class="confession-footer">
-                                <span>Posted 2 hours ago</span>
-                                <div>
-                                    <span class="icon comment-icon" onclick="toggleCommentSection(1)"><i class="fas fa-comment"></i> Comment</span>
-                                    <span class="icon report-icon" onclick="reportConfession(1)"><i class="fas fa-flag"></i> Report</span>
+                        @foreach ($confession as $item)
+                            <div class="confession-item py-4">
+                                <div class="confession-text">
+                                    {{$item->content}}
+                                </div>
+                                <div class="confession-footer">
+                                    <span>{{$item->updated_at}}</span>
+                                    <div>
+                                        <span class="icon comment-icon" onclick="toggleCommentSection(1)"><i class="fas fa-comment"></i> Comment</span>
+                                        <span class="icon report-icon" onclick="reportConfession(1)"><i class="fas fa-flag"></i> Report</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Confession Item 2 -->
-                        <div class="confession-item">
-                            <div class="confession-text">
-                                I’ve been struggling a lot lately, and I just needed to share it with someone.
-                            </div>
-                            <div class="confession-footer">
-                                <span>Posted 5 hours ago</span>
-                                <div>
-                                    <span class="icon comment-icon" onclick="toggleCommentSection(2)"><i class="fas fa-comment"></i> Comment</span>
-                                    <span class="icon report-icon" onclick="reportConfession(2)"><i class="fas fa-flag"></i> Report</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

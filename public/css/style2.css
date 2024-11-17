@@ -136,3 +136,9 @@ footer .container {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+#sidebar {
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: #021431 !important; /* Dark green background */
+}

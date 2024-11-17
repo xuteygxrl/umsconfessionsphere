@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-
+     
     <section id="Home">
         <div id="mytext">
             <h1 id="names">
@@ -44,7 +44,7 @@
             </h1>
             <hr id="hr0">
         </div>
-	
+
         <div class="col-12">
             <a  href="/crushing-list">
             <div class="skillcontainer smoothtransform" id="skillsec">
@@ -63,41 +63,41 @@
                     <div class="skillcircle">
                         <div class="skillcircle2">
                             <h2 class="skillpre"><small></small></h2>
-                
+
                         </div>
                     </div>
                     <a  href='/university-life-list'>
                     <h3 class="skilltx">University Life</h3>
-            
+
                 </div>
                 <a  href='/general-list'>
                 <div class="skillbox" style="--b:100%;--clr:white;" id="sjs">
                     <div class="skillcircle">
                         <div class="skillcircle2">
                             <h2 class="skillpre"><small></small></h2>
-                
+
                         </div>
                     </div>
                     <a href='/general-list'>
                     <h3 class="skilltx">General</h3>
-            
+
             </div>
         </div>
-        
+
     </section>
     <br><br><br>
-    
+
 
     <a onclick='location.href="#"' class="to-top">
         <i class='bx bx-chevron-up'></i>
     </a>
 
-    
+
 
     <div class="toastnt">
         <div class="ntcont">
             <i class='bx ntcheck'></i>
-        
+
             <div class="ntmsg">
                 <span id="alttil" class="nttxt nttxt1">Alert</span>
                 <span id="altmsg" class="nttxt nttxt2">Message</span>
