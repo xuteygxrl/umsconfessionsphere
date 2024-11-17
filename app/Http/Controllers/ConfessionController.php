@@ -98,5 +98,4 @@ class ConfessionController extends Controller
             return redirect()->back()->withErrors(['error' => 'An error occurred while rejecting the confession.']);
         }
     }
-
 }
