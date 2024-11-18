@@ -24,9 +24,13 @@
     <nav class="navbar" id="navigation">
         {{ request()->path() }} 
         <a class="url nav-item {{ request()->is('/') ? 'active' : '' }}" id="hmnav"   href="/" style="--i:0;">Home</a>
-        <a class="url nav-item {{ request()->is('crushing-list') ? 'active' : '' }}"  href="/crushing-list" style="--i:1;">Crushing</a>
-        <a class="url nav-item {{ request()->is('general-list') ? 'active' : '' }}"  href="/general-list" style="--i:3;">General</a>
-        <a class="url nav-item {{ request()->is('university-life-list') ? 'active' : '' }}"  href="/university-life-list" style="--i:1;">University Life</a>
+        <a class="url nav-item" 
+            href="#category" 
+            style="--i:1;"
+            onclick="navigateToCategory(event)">
+            Category
+         </a>
+        <a class="url nav-item {{ request()->is('profile') ? 'active' : '' }}"  href="/profile" style="--i:1;">Profile</a>
         <a class="url nav-item {{ request()->is('login') ? 'active' : '' }}" href="{{ route('logout') }}" 
             onclick="event.preventDefault(); 
                      fetch('{{ route('logout') }}', { 
@@ -41,3 +45,19 @@
          
     </nav>
 </header>
+
+<script>
+    function navigateToCategory(event) {
+        // Prevent the default anchor click behavior
+        event.preventDefault();
+
+        // Check if the current URL path is the homepage ('/')
+        if (window.location.pathname === '/') {
+            // If on the homepage, scroll to the #category section
+            document.querySelector('#category').scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // If not on the homepage, redirect to the homepage with #category
+            window.location.href = '/#category';
+        }
+    }
+</script>

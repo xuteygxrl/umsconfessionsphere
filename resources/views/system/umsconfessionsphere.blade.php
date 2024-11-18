@@ -35,7 +35,7 @@
             </div>
         </div>
     </section>
-    <section class="smoothtransform row d-flex" id="Skills">
+    <section class="smoothtransform row d-flex" id="category">
         <div class="titles col-12 justify-content-center">
             <h1 class="glitch">
                 <span aria-hidden="true">Category</span>

@@ -226,7 +226,7 @@ section {
     position: absolute;
     top: 0;
     margin-top: 100px;
-    z-index: 50;
+    z-index: 2000;
     font-family: "Poppins", sans-serif;
     left: 0;
     right: 0;
@@ -579,8 +579,8 @@ section {
 }
 
 
-/*Skills progress*/
-#Skills {
+/*category progress*/
+#category {
     z-index: 50;
     top: 0;
     margin-top: 35rem;
@@ -812,7 +812,7 @@ section {
     }
 }
 
-/*Education skills*/
+/*Education category*/
 .gledu {
     font-family: "Poppins", sans-serif;
     display: flex;
@@ -1610,7 +1610,7 @@ footer {
 }
 
 @media (max-width: 1020px) {
-    #Skills {
+    #category {
         margin-top: 50rem;
     }
 
@@ -1653,7 +1653,7 @@ footer {
 
     }
 
-    #Skills {
+    #category {
         margin-top: 67rem;
     }
 
@@ -1855,7 +1855,7 @@ footer {
         font-size: 90%;
     }
 
-    #skills {
+    #category {
         margin-top: 57rem;
     }
 
@@ -1898,7 +1898,7 @@ footer {
         transform: translate(-62%);
     }
 
-    #Skills {
+    #category {
         margin-top: 52rem;
     }
 
