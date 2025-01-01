@@ -8,6 +8,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Admin\AdminReportController;
+use App\Http\Controllers\Admin\AdminBanController;
+use App\Http\Controllers\Admin\AdminUserManagementController;
+use App\Http\Controllers\Admin\ConfessionManagementController;
 
 // Public routes
 
@@ -22,7 +25,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('admin/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
     Route::post('admin/logout', [AuthController::class, 'logout'])->name('admin.logout');
 
-    Route::get('admin/report', [AdminReportController::class, 'reportView'])->name('admin.reportView');
+    Route::get('admin/report', [AdminReportController::class, 'reportView'])->name('admin.report');
     Route::post('/admin/report/resolve/{id}', [AdminReportController::class, 'resolveReport'])->name('admin.resolveReport');
 
     Route::get('admin/ban-user', [AdminBanController::class, 'banUser'])->name('admin.banUser');

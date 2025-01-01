@@ -15,19 +15,19 @@
                     <hr>
                     <ul class="nav flex-column mt-4">
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ request()->is('dashboard') ? 'active' : '' }}" href="/admin/dashboard">Dashboard</a>
+                                <a class="nav-link text-white {{ request()->is('dashboard') ? 'active' : '' }}" href="{{route('admin.dashboard')}}">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ request()->is('user-management') ? 'active' : '' }}" href="/user-menagement">User Management</a>
+                                <a class="nav-link text-white {{ request()->is('user-management') ? 'active' : '' }}" href="{{route('admin.userManagement')}}">User Management</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ request()->is('confession-management') ? 'active' : '' }}" href="/confession-management">Confession Management</a>
+                                <a class="nav-link text-white {{ request()->is('confession-management') ? 'active' : '' }}" href="{{route('admin.confessionManagement')}}">Confession Management</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ request()->is('ban-user') ? 'active' : '' }}" href="/ban-user">Ban User</a>
+                                <a class="nav-link text-white {{ request()->is('ban-user') ? 'active' : '' }}" href="{{route('admin.banUser')}}">Ban User</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ request()->is('report-list') ? 'active' : '' }}" href="/admin/report">Report List</a>
+                                <a class="nav-link text-white {{ request()->is('report-list') ? 'active' : '' }}" href="{{route('admin.report')}}">Report List</a>
                             </li>
                     </ul>
 
