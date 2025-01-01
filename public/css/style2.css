@@ -142,3 +142,21 @@ footer .container {
     height: 100vh;
     background-color: #021431 !important; /* Dark green background */
 }
+
+.confession-box{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-box{
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

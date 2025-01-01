@@ -12,6 +12,8 @@ class Confession extends Model
 
     protected $table = 'confession'; // Specify the table name if it doesn't follow Laravel's naming convention
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'content',
         'userId',

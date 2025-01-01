@@ -2190,6 +2190,14 @@ footer {
     height: 10vh;
     text-align: left;
     background-color: white;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    p{
+        padding: 10px;
+        font-size: 16px !important;
+    }
 }
 
 #sidebar {
@@ -2209,5 +2217,125 @@ footer {
     overflow: scroll;
     p{
         font-size: 15px !important;
+    }
+}
+
+.confession-box {
+    width: 60vw !important;
+    min-height: 20vh;
+    max-height: 90vh;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    p{
+        text-align: start !important;
+        font-size: 16px !important;
+        padding: 10px !important;
+    }
+}
+
+.comment-box{
+    width: 60vw !important;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    .comment-turn-off{
+        text-align: center !important;
+        padding: 20px;
+        font-size: 20px !important;
+        width: 100%;
+
+    }
+    
+    .comment-box-child{
+        width: 100%;
+        height: 60vh;
+        border: 1px solid black;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        overflow-y: scroll;
+        border-radius: 10px;
+        .suround-box{
+            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            justify-self: center;
+            .user-id{
+                justify-self: start;
+                width: 100%;
+                text-align: start;
+            }
+            .timestamp{
+                justify-self: end;
+                width: 100%;
+                text-align: end;
+            }
+            .report{
+                justify-self: end;
+                width: 100%;
+                text-align: end;
+                font-size: 12px;
+            }
+        }
+        
+        .each-comment{
+            display: flex;
+            justify-self: center;
+            text-align: start;
+            width: 90%;
+            height: 5vw;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            p{
+                padding: 5px;
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+
+.confession-template-box{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.comment-submission-box{
+    
+    width: 100%;
+    height: 100px;
+    align-self: baseline;
+    border-radius: 10px;
+    textarea{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    button{
+        display: flex;
+        justify-self: end; 
+    }
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+#Report{
+    color: black !important;
+
+    h1{
+        color: black !important;
     }
 }

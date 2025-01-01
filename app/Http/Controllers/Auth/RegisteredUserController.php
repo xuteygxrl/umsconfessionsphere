@@ -43,9 +43,13 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
+         // Send email verification link
+        $user->sendEmailVerificationNotification();
+
         event(new Registered($user));
 
         Auth::logout(); // Log out the user if they are automatically logged in after registration
+        
 
         return redirect()->route('login');
     }

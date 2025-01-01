@@ -27,7 +27,7 @@
                                 <a class="nav-link text-white {{ request()->is('ban-user') ? 'active' : '' }}" href="/ban-user">Ban User</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ request()->is('report-list') ? 'active' : '' }}" href="/report-list">Report List</a>
+                                <a class="nav-link text-white {{ request()->is('report-list') ? 'active' : '' }}" href="/admin/report">Report List</a>
                             </li>
                     </ul>
 

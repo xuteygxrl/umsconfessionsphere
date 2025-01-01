@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\confession;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Log; // Don't forget to import Log facade
 
 class ConfessionController extends Controller
@@ -30,6 +31,7 @@ class ConfessionController extends Controller
             $confession->userId = Auth::id(); // Assuming you're using authentication
             $confession->confessionCategoryId = $validatedData['confession_category_id']; // Get the selected category ID
             $confession->commentSwitch = $validatedData['commentSwitch']; // Set commentSwitch based on the request data
+            $confession->isDeleted = 0;
 
             $confession->save();
 
@@ -98,4 +100,25 @@ class ConfessionController extends Controller
             return redirect()->back()->withErrors(['error' => 'An error occurred while rejecting the confession.']);
         }
     }
+
+
+public function storeComment(Request $request)
+{
+    // Validate input
+    $validated = $request->validate([
+        'confessionId' => 'required|exists:confession,id', // Ensure the confession exists
+        'commentText' => 'required|string|max:1000',
+    ]);
+
+    // Save the comment
+    Comment::create([
+        'confessionId' => $validated['confessionId'],
+        'userId' => auth()->id(), // Use the currently authenticated user
+        'commentText' => $validated['commentText'],
+    ]);
+
+    // Redirect back with success message
+    return redirect()->back()->with('success', 'Comment added successfully!');
+}
+
 }
